@@ -1,0 +1,25 @@
+﻿@{
+	ViewData["Title"] = "Register";
+}
+
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+	<h1 class="">Регистрация</h1>
+	<form method="post" asp-action="Register" asp-controller="Register">
+		<div class="form-group container d-flex flex-column justify-content-center align-items-center">
+			<div>
+				<label class="control-label">Логин:</label>
+				<input asp-for="Login" class="form-control" name="Login"/>
+			</div>
+			<div>
+				<label class="control-label">ФИО:</label>
+				<input asp-for="FullName" class="form-control" name="FullName"/>
+			</div>
+			<div>
+				<label class="control-label">Пароль:</label>
+				<input asp-for="Password" class="form-control" type="password" name="Password"/>
+			</div>
+			@ViewData["Message"]
+			<button class="btn btn-primary mt-2" type="submit">Зарегистрироваться</button>
+		</div>
+	</form>
+</div>
